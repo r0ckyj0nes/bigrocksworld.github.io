@@ -1,0 +1,118 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="wieport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="cc_styles.css"/>
+        <title>document</title></title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">B.R.W</div>
+            <ul class="nav-linka">
+             <div class="menu">
+                <li><a href="./landingpage.html">Home</a></li>
+                <li><a href="./Booking.html">Book</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./pricing.html">Pricing</a></li>
+                
+            </ul>
+        </nav>
+    </body>
+    </html>
+    <div class="pricing-list5">
+    <center>
+    <h2>Booking Terms and Policies</h2>
+    <p style="color: red;"><i>Please read full terms and policies before booking</i></p>
+    <p style="color: red;">double click below</p>
+    <button ondblclick="mytermsandpolicies ()">
+    Terms and Policies</button>
+    <script>
+        function mytermsandpolicies () {
+            alert ("1. Have $5 non-refundable deposit ready!\n" + "2.No response within the first 24hrs of booking will result in a cancelation.\n" + "3. No children or pets during appointments!");
+        }
+    </script>
+    <br><br>
+    </center>
+</div>
+
+<div class="static">
+    <body>
+    <center>   
+    <header><i>BOOK NOW!</i></header>
+    <form action="Booking.html">
+    <label for="text">Name</label>
+    <input type="text" id="name" placeholder="Name">
+    <br><br>
+    <label for="Services">Service Type</label>
+    <p>Hold ctrl or command then select each service you wish to add to select multiple services</p>
+    <select name="Service Type" id="multiple-select" multiple>
+        <option value="Acrylic Overlay">Acrylic Overlay</option>
+        <option value="Gel X">Gel X</option>
+        <option value="Maintenance">Maintenance</option>
+        <option value="Press-Ons">Press-Ons</option>
+        <option value="Just Polish">Just Polish</option>
+    </select>
+
+    <select name="Service Length" id="multiple-select" multiple>
+        <option value="SHORT">SHORT</option>
+        <option value="REGULAR">REGULAR</option>
+        <option value="MEDIUM">MEDIUM</option>
+        <option value="LONG">LONG</option>
+        <option value="XLONG">XLONG</option>
+        <option value="XXLONG">XXLONG</option>
+        <option value="EXTENDO">EXTENDO</option>
+    </select>
+
+    <select name="Service Add-ons" id="multiple-select" multiple>
+        <option value="Nail Art">Nail Art</option>
+        <option value="Nail Charms">Nail Charms</option>
+        <option value="Freestlye">Freestyle</option>
+        <option value="Frenchie">Frenchie</option>
+        <option value="Nail Gems">Nail Gems</option>
+    </select>
+
+    <br><br>
+    <label for="date">Date of Appointment</label>
+    <input type="date">
+    <label for="time">Time of Appointment</label>
+    <input type="time">
+    <br><br>
+    <label for="file">INSPO PIC</label>
+    <input type="file">
+    <br><br>
+    <label for="tel">Phone Number</label>
+    <input type="tel" id="phone" placeholder="123-4567890" pattern="[0-9]{3}-[0-9]{3}[0-9]{4}">
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="example123@site.com"> 
+    <br><br>
+    <input type="button"
+    onclick="window.location.href='appointmentconfirmation.html';"
+    class="btn btn-warning btn-lg" value="BOOKED!"/>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/CvySQUoKyGZ6ulcg/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
+<script  src="https://code.jquery.com/jquery-3.4.1.js"  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous">
+</script>
+ </form>
+</center>
+</body>
+</div>

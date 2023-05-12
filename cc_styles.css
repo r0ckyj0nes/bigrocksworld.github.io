@@ -1,0 +1,502 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+    float: right;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+.fluid {
+    margin-left: 0;
+    width: 100%;
+    display: block;
+    background-color: #FFFFFF;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+/* Mobile Layout: 480px and below. */
+  
+.gridContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 86.45%;
+    padding-left: 2.275%;
+    padding-right: 2.275%;
+    clear: none;
+    float: none;
+}
+.header_div {
+	background-image: url(assets/cc_logo.gif);
+	background-repeat: no-repeat;
+	height: 150px;
+	margin-top: 10px;
+}
+.nav_div {
+	width: 30%;
+	float: left;
+	border-top-width: thin;
+	border-top-style: solid;
+	border-right-width: thin;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-left-width: thin;
+	text-indent: 3px;
+}
+.nav_ul {
+    width: 100%;
+    background-color: #A1D7E5;
+    list-style-type: none;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    margin-left: 0;
+    vertical-align: text-top;
+}
+.fluid.nav_div .fluid.fluidList.nav_ul li {
+    border-bottom: thin solid #211E1E;
+    text-align: left;
+}
+.nav_ul_li {
+    text-align: center;
+}
+.intro_paragraph {
+	width: 97%;
+	float:none; 
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	clear: none;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.paragraph_text {
+	width: 50%;
+	display: block;
+	float: right;
+	clear: right;
+}
+.footer_div {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-size: small;
+	text-align: center;
+	background-color: #FFD9A8;
+	margin-top: 10px;
+}
+.img_div {
+	margin-top: 10px;
+	text-align: left;
+}
+.zeroMargin_mobile {
+margin-left: 0;
+}
+.hide_mobile {
+display: none;
+}
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+.header_div {
+	margin-top: 10px;
+	background-image: url(assets/cc_banner_tablet.jpg);
+	height: 150px;
+}
+.nav_div {
+width: 30%;
+}
+.nav_ul {
+width: 100%;
+margin-left: 0;
+}
+.hide_tablet {
+display: none;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+.gridContainer {
+	width: 88.5%;
+	max-width: 975px;
+	padding-left: 0.75%;
+	padding-right: 0.75%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+.header_div {
+    background-image: url(assets/cc_banner.jpg);
+    color: #14E3CC;
+    font-size: 100px;
+    font-style: italic;
+}
+.nav_div {
+width: 30%;
+}
+.nav_ul {
+width: 100%;
+margin-left: 0;
+}
+
+.hide_desktop {
+display: none;
+}
+
+.navbar {
+	background-color: #FFC0CB;
+	overflow: hidden;
+	font-size: 25px;
+	position: static;
+
+}
+.navbar {
+	float: left;
+	color: black;
+	text-align: right;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-weight: bold;
+}
+.navbar a:hover {
+	background-color: #ffffff60;
+	color: #FFC0CB;
+}
+.active {
+	background-color: #FFF;
+	color: #FFC0CB;
+}
+.booking {
+	float: right;
+	font-size: 12px;
+	background-color: #FFF;
+	color: #FFC0CB;
+	border: none;
+	padding: 14px 16px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.booking:hover {
+	background-color: #FFC0CB;
+	color: #FFF;
+}
+@media screen and (max-width: 600px) {
+	.navbar.responsive {
+		position: relative;
+}
+}
+.navbar.responsive .icon {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.navbar.responsive a {
+	float: none;
+	display: block;
+	text-align: right;
+}
+.booking {
+	display: inline-block;
+	background-color: black;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 1.2e;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+	}
+	.booking:hover {
+		background-color: #FF69B4;
+	}
+	@media screen and (max-width:default) {
+		.booking {
+			display: block;
+			margin:auto
+		}
+	}
+	.wrapper {
+		display: Flex;
+		padding-top: 50px;
+		justify-content: center;
+	}
+	.collapsible {
+		max-width: 450px;
+		overflow: hidden;
+		font-weight: 500;
+	}
+	.collapsible label {
+		position: relative;
+		font-weight: 600;
+		background: #FFF;
+		box-shadow: grey;
+		color: #FFC0CB;
+		display: block;
+		margin-bottom: 10PX;
+		cursor: pointer;
+		padding: 15px 0;
+		border-radius: 4px;
+	}
+	.collapsible label:after {
+		content: "";
+		position: absolute;
+		right: 15px;
+		top: 20px;
+		width: 18px;
+		height: 18px;
+	}
+	.collapsible-text {
+		max-height: 1px;
+		overflow: hidden;
+		border-radius: 4px;
+		line-height: 1.4;
+	}
+	
+            .navbar {
+                background-color: #FFC0CB;
+                overflow: hidden;
+                font-size: 25px;
+                position: static;
+
+            }
+            .navbar {
+                float: left;
+                color: black;
+                text-align: right;
+                padding: 100px 16px;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .navbar a:hover {
+                background-color: #ffffffe3;
+                color: #ffc0cb62;
+            }
+            .active {
+                background-color: #ffffff59;
+                color: #FFC0CB;
+            }
+            .booking {
+                float: right;
+                font-size: 12px;
+                background-color: #FFF;
+                color: #FFC0CB;
+                border: none;
+                padding: 14px 16px;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+            .booking:hover {
+                background-color: #FFC0CB;
+                color: #FFF;
+            }
+            @media screen and (max-width: 600px) {
+
+			}
+                .navbar.responsive {
+                    position: relative;
+            }
+            .navbar.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: right;
+			}
+		}
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: content-box;
+		}
+		body {
+			font-family: cursive;
+		}
+		a {
+			text-decoration: none;
+		}
+		li {
+			list-style: none;
+		}
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 10px;
+			background-color: #FF69B4;
+			color: #ffffff;
+		}
+		.nav-links a {
+			color: #ffffff2f;
+		}
+		.logo {
+			font-size: 29px;
+		}
+		.menu {
+			display: flex;
+			gap: 1em;
+			font-size: 18px;
+		}
+		.menu li:hover {
+			background-color: #FFC0CB;
+			border-radius: 100px;
+			transition: 0.3 ease;
+		}
+		.menu li {
+			padding: 10px 115px;
+		}
+		.pricing-list {
+			background-color: #FFC0CB;
+			width: 120px;
+			border: 10px dotted #FF69B4;
+			padding: 35px;
+			margin: 70px;
+		}
+		.pricing-list2 {
+			background-color: #FFC0CB;
+			width: 120px;
+			border: 10px dotted #FF69B4;
+			padding: 35px;
+			margin: 0px auto;
+			position: absolute;left: 370px;bottom: 115px;
+		}
+		.pricing-list3 {
+			background-color: #FFC0CB;
+			width: 120px;
+			border: 10px dotted #FF69B4;
+			padding: 35px;
+			margin: 0px auto;
+			position: absolute;left: 670px;bottom: 70px;
+		}
+		.pricing-list4 {
+			background-color: #FFC0CB;
+			width: 120px;
+			border: 10px dotted #FF69B4;
+			padding: 35px;
+			margin: 0px auto;
+			position: absolute;left: 970px;bottom: 120px;
+		}
+		.pricing-list5 {
+			background-color: #FFC0CB;
+			width: 200px;
+			border: 10px dotted #FF69B4;
+			padding: 35px;
+			margin: 0px auto;
+			position: absolute;left: 550px;bottom: 200px;
+
+		}
+		#main-div {
+			width: 120px;
+			height: 200px;
+			border: 10px dotted #FF69B4;
+			margin: 50px center;
+			padding: 35px;
+			display: flex;
+			justify-content: space-between;
+		}
+		.child-div {
+			background-color: #FFC0CB;
+			height: 100px;
+			text-align: center;
+			border: 1px solid black;
+		}
+		div.static {
+			position: relative;
+			border: 10px dotted #FF69B4;
+			padding: 50px;
+			margin: 0px auto;
+			width: 600px;
+			position: absolute;left: 350px;top: 500px;
+		}
+		.pricing-list6 {
+			background-color: #ffc0cb6c;
+			width: 200px;
+			border: none;
+			padding: 20px;
+			margin: 2px auto;
+			position: absolute;left: 50px;bottom: 260px;
+			justify-content: space-evenly;
+		}
+		.pricing-list7 {
+			background-color: #ffc0cb6c;
+			width: 200px;
+			border: none;
+			padding: 20px;
+			margin: 2px auto;
+			position: absolute;left: 50px;bottom: 30px;
+			justify-content: space-evenly;
+		}
+		.pricing-list8 {
+			background-color: #ffc0cb6c;
+			width: 200px;
+			border: none;
+			padding: 20px;
+			margin: 2px auto;
+			position: absolute;left: 50px;top: 680px;
+			justify-content: space-evenly;
+		}
+		.pricing-list9 {
+			background-color: #ffc0cb6c;
+			width: 200px;
+			border: none;
+			padding: 20px;
+			margin: 2px auto;
+			position: absolute;left: 50px;top: 970px;
+			justify-content: space-evenly;
+		}
+		.pricing-list0 {
+			background-color: #ffc0cb6c;
+			width: 200px;
+			border: none;
+			padding: 20px;
+			margin: 2px auto;
+			position: absolute;left: 50px;top: 1200px;
+			justify-content: space-evenly;
+		}
+		.pricing-list10 {
+			background-color: #ffc0cb6c;
+			width: 300px;
+			border: none;
+			padding: 20px;
+			margin: 2px auto;
+			position: absolute;left: 500px;top: 200px;
+			justify-content: space-evenly;
+		}
